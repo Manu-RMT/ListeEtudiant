@@ -11,11 +11,12 @@ class ViewController: UIViewController, UITabBarDelegate,UITableViewDataSource {
     var tableauEtudiant : [Etudiant] = []
     @IBOutlet weak var listeEtudiantView: UITableView!
     
+    // gère le nombre de ligne
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableauEtudiant.count
     }
     
-    //
+    // gère la mat et l'affichage des elements dans les celllules
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = listeEtudiantView.dequeueReusableCell(withIdentifier: "idCelluleEtu") as! CelluleEtudiant
         let etudiantList = tableauEtudiant[indexPath.row]
@@ -29,14 +30,22 @@ class ViewController: UIViewController, UITabBarDelegate,UITableViewDataSource {
         return cell
     }
     
+    // gère la suppression des lignes
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+     {
+         if editingStyle == .delete
+         {
+             tableauEtudiant.remove(at: indexPath.row)
+             self.listeEtudiantView.reloadData()
+         }
+     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         creationTableauEtudiant()
-        let spacing: CGFloat = 2.0
-        listeEtudiantView.contentInset = UIEdgeInsets(top: 50, left: spacing, bottom: 0, right: spacing)
+        listeEtudiantView.contentInset.top = 50
         listeEtudiantView.rowHeight = 150
         
     }
