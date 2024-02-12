@@ -8,7 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITabBarDelegate,UITableViewDataSource {
+    
     var tableauEtudiant : [Etudiant] = []
+    var od_refresh : ODRefreshControl?
     @IBOutlet weak var listeEtudiantView: UITableView!
     
     // gère le nombre de ligne
@@ -47,7 +49,8 @@ class ViewController: UIViewController, UITabBarDelegate,UITableViewDataSource {
         creationTableauEtudiant()
         listeEtudiantView.contentInset.top = 50
         listeEtudiantView.rowHeight = 150
-        
+        od_refresh = ODRefreshControl()
+        od_refresh?.scrollView = listeEtudiantView
     }
     
     

@@ -91,7 +91,7 @@
                                 </connections>
                             </tableView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-8J-eEP">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="102"/>
+                                <rect key="frame" x="0.0" y="-2" width="393" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2uG-qF-6Al">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="102"/>
