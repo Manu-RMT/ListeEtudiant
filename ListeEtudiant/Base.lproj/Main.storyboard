@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="111" id="alB-9y-DgG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCelluleEtu" rowHeight="111" id="alB-9y-DgG" customClass="CelluleEtudiant" customModule="ListeEtudiant" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alB-9y-DgG" id="JXC-7k-JPC">
@@ -94,6 +94,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img_etudiant" destination="fbI-S2-Qkj" id="680-qe-yIY"/>
+                                            <outlet property="nb_abscence" destination="wFH-8C-gtU" id="lw4-dA-Z3i"/>
+                                            <outlet property="nomEtudiant" destination="QV9-QA-ZR5" id="m5F-20-sk2"/>
+                                            <outlet property="numTP" destination="426-4t-CEF" id="2HE-0Z-Yfu"/>
+                                            <outlet property="prenomEtudiat" destination="Vau-S7-JrZ" id="voX-oG-LQe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

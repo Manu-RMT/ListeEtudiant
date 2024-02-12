@@ -9,6 +9,12 @@ import UIKit
 
 class CelluleEtudiant: UITableViewCell {
 
+    @IBOutlet weak var nomEtudiant: UILabel!
+    @IBOutlet weak var prenomEtudiat: UILabel!
+    @IBOutlet weak var numTP: UILabel!
+    @IBOutlet weak var nb_abscence: UILabel!
+    @IBOutlet weak var img_etudiant: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +25,20 @@ class CelluleEtudiant: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    // met à jour les éléments de la cellule
+    func majCellule(etu : Etudiant) {
+        nomEtudiant.text = etu.nom
+        prenomEtudiat.text = etu.prenom
+        numTP.text = etu.groupeTP
+        nb_abscence.text = String(etu.nbAbsence)
+        if let image = UIImage(named: etu.nomPhoto) {
+            img_etudiant.image = image
+        }
+        
+    }
+    
+    
+    
 }
+    
