@@ -22,7 +22,7 @@ class Etudiant {
         self.formation = formation
         self.groupeTP = groupeTP
         self.nomPhoto = "photoEtudiant.png"
-        self.nbAbsence = 0
+        self.nbAbsence = numAbsence
     }
     
 }

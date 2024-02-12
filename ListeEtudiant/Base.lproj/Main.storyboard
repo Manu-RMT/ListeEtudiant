@@ -21,17 +21,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCelluleEtu" rowHeight="111" id="alB-9y-DgG" customClass="CelluleEtudiant" customModule="ListeEtudiant" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="111"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCelluleEtu" rowHeight="128" id="alB-9y-DgG" customClass="CelluleEtudiant" customModule="ListeEtudiant" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alB-9y-DgG" id="JXC-7k-JPC">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="111"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoEtudiant.png" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-S2-Qkj">
-                                                    <rect key="frame" x="11" y="0.0" width="117" height="111"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QV9-QA-ZR5">
                                                     <rect key="frame" x="147" y="11" width="79" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -74,6 +70,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoEtudiant.png" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-S2-Qkj">
+                                                    <rect key="frame" x="20" y="11" width="117" height="111"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -85,6 +85,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nxU-7x-mpV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6ad-mz-ZDe"/>
+                                </connections>
                             </tableView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-8J-eEP">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="102"/>
@@ -109,7 +113,7 @@
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                     </view>
                     <connections>
-                        <outlet property="listeEtudiant" destination="wkj-D0-C51" id="wK1-Ng-dQP"/>
+                        <outlet property="listeEtudiantView" destination="wkj-D0-C51" id="vPX-Ic-t6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
