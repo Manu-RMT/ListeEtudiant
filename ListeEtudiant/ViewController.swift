@@ -20,11 +20,16 @@ class ViewController: UIViewController, UITabBarDelegate,UITableViewDataSource {
         let cell = listeEtudiantView.dequeueReusableCell(withIdentifier: "idCelluleEtu") as! CelluleEtudiant
         let etudiantList = tableauEtudiant[indexPath.row]
         cell.majCellule(etu: etudiantList)
+        
+        // decalage de la couleur  1/2
+        if ((indexPath.row % 2) != 0) {
+            cell.backgroundColor = UIColor.yellow
+        }
+            
         return cell
     }
     
     
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
